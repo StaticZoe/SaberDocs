@@ -49,8 +49,8 @@ nav:
       - Quick Start: saberdeep/quick-start.md
       - Blueprint: saberdeep/blueprint.md
       - C++: saberdeep/cpp.md
-      - Extending: saberdeep/extending.md
-      - API Reference: saberdeep/api.md
       - Force Order: saberdeep/force-order.md
+      - API Reference: saberdeep/api.md
+      - Extending: saberdeep/extending.md
       - Release Notes: saberdeep/release-notes.md
       - Support: saberdeep/support.md
