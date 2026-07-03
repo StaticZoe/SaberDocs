@@ -1,4 +1,4 @@
-# Extending SaberDeep
+# Extending
 
 SaberDeep is designed to be extended instead of patched into one large project-specific attribute system.
 

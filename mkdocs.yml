@@ -49,7 +49,7 @@ nav:
       - Quick Start: saberdeep/quick-start.md
       - Blueprint: saberdeep/blueprint.md
       - C++: saberdeep/cpp.md
-      - Extending SaberDeep: saberdeep/extending.md
+      - Extending: saberdeep/extending.md
       - API Reference: saberdeep/api.md
       - Force Order: saberdeep/force-order.md
       - Release Notes: saberdeep/release-notes.md
