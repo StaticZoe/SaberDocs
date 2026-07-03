@@ -27,7 +27,7 @@ This gives you:
 
 !!! tip "Designed for modifier-heavy gameplay"
 
-    For practical examples such as stacked stats, independent input locks, equipment rebuilds, tag composition, and event-driven UI updates, see [Use Cases](use-cases.md).
+    For practical gameplay scenarios where multiple systems affect the same value or state, see [Use Cases](use-cases.md).
 
 ## Core Concepts
 
