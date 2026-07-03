@@ -19,6 +19,26 @@ Typical examples include:
 - single `FGameplayTag` values
 - `FGameplayTagContainer` values that can be added, removed, filtered, or overridden
 
+## Independent System Overrides
+
+SaberDeep is also useful when multiple systems can affect the same value without knowing about each other.
+
+For example, several gameplay systems may need to disable player input:
+
+- a dialogue sequence
+- a cutscene
+- a stun effect
+- a UI modal
+- a scripted interaction
+
+If each system directly sets input enabled or disabled, one system can accidentally enable input while another system still needs it disabled.
+
+With SaberDeep, player input can be represented as a `USaberDeepBool` attribute. Each system that needs to disable input inserts its own bool override factor that returns `false`. When that system is finished, it removes only its own factor.
+
+The final input state becomes enabled only after all systems have removed their disabling factors.
+
+This lets systems safely cooperate through factors without direct dependencies between them.
+
 ## Why Use SaberDeep
 
 Gameplay attributes often become hard to maintain when buffs, equipment, states, perks, difficulty rules, and temporary overrides all write directly into the same value.
