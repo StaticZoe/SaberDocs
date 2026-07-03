@@ -2,7 +2,7 @@
 
 SaberDeep is useful when the final gameplay value is not owned by one system.
 
-It fits values and states that are built from many independent gameplay contributions: equipment, loadouts, buffs, debuffs, abilities, level rules, difficulty rules, UI states, scripted sequences, and designer-authored special cases.
+It fits values and states that are built from many independent gameplay contributions: equipment, loadouts, buffs, debuffs, abilities, level rules, difficulty rules, UI states, and scripted sequences.
 
 Instead of asking one system to know every other system that may be changing the same value, each system owns its own factor. When that system starts, it adds the factor. When it ends, it removes the factor. SaberDeep rebuilds the final value from the factors that still exist.
 
@@ -30,27 +30,21 @@ With a `USaberDeepBool` attribute, each blocking system inserts its own factor t
 
 Input becomes enabled only after every blocking system has removed its factor.
 
-## Composed Gameplay Tags
+## Shared Gameplay Tag State
 
-Use `USaberDeepTag` or `USaberDeepTags` when tags represent mutable gameplay state.
+Use `USaberDeepTag` or `USaberDeepTags` when a tag value or tag container is shared mutable state affected by multiple systems.
 
 This is useful for ability restrictions, interaction modes, movement modes, damage states, equipment-granted tags, level rule tags, or temporary status tags.
 
-Different systems can add, remove, filter, or override tags without sharing a single piece of fragile tag-editing code.
+SaberDeep does not replace `FGameplayTag` or `FGameplayTagContainer`. It uses them as the stored value type, then adds factor ownership, ordered composition, safe removal, and value changed events around them.
 
-## Designer-Created Modifier Logic
-
-Use SaberDeep when designers need to prototype special rules in Blueprint while programmers keep the core attribute model stable.
-
-For example, a designer can create a factor for a low-health bonus, a weather penalty, an encounter-specific damage rule, or a one-off ability interaction. The factor can be added to the same attribute pipeline as C++ factors.
-
-Programmers can still write reusable or performance-sensitive factors in C++, and can extend the system with new DeepAttribute value families when a project needs a custom value type.
+If one system owns the tags and only needs normal tag queries, use a normal `FGameplayTagContainer`. If several systems need to add, remove, filter, or override the same tag state independently, SaberDeep keeps those contributions separate and rebuilds the final tag state from the active factors.
 
 ## Reactive UI and Gameplay Feedback
 
 Use SaberDeep when UI or gameplay listeners should react to the computed final value, not to every individual system that contributed to it.
 
-HUD values, character panels, ability previews, debug overlays, and effect indicators can listen for value changes from the attribute. The UI does not need to know whether the change came from equipment, a buff, a level rule, or a designer-authored factor.
+HUD values, character panels, ability previews, debug overlays, and effect indicators can listen for value changes from the attribute. The UI does not need to know whether the change came from equipment, a buff, a level rule, or a custom factor.
 
 ## When SaberDeep May Be Too Much
 
