@@ -30,9 +30,8 @@ Basic flow:
 4. Create an `Int Add` factor.
 5. Store the factor in a Blueprint variable.
 6. Set the factor value, for example `25`.
-7. Set the factor force, for example `10`.
-8. Insert the factor into the attribute.
-9. Read `Get Final`.
+7. Insert the factor into the attribute.
+8. Read `Get Final`.
 
 If `Auto Refresh` is enabled, `Final` updates when the factor is inserted.
 
@@ -72,7 +71,6 @@ void AMyActor::BeginPlay()
 
     BonusHealth = NewObject<USaberDeepIntAdd>(this);
     BonusHealth->SetValue(25.f);
-    BonusHealth->SetForce(10);
 
     Health->InsertFactor(BonusHealth);
 
