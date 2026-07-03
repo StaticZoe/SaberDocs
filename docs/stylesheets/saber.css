@@ -42,8 +42,9 @@
 
 .md-header,
 .md-tabs {
-  background: var(--saber-header-bg);
-  color: var(--saber-header-fg);
+  background-color: var(--saber-header-bg) !important;
+  background-image: none !important;
+  color: var(--saber-header-fg) !important;
 }
 
 .md-header {
@@ -61,27 +62,32 @@
 .md-source,
 .md-source__repository,
 .md-source__facts {
-  color: var(--saber-header-fg);
+  color: var(--saber-header-fg) !important;
+}
+
+.md-header__button svg,
+.md-source__icon svg {
+  fill: currentColor !important;
 }
 
 .md-tabs__link:hover,
 .md-tabs__link--active {
-  color: var(--saber-accent-strong);
+  color: var(--saber-accent-strong) !important;
 }
 
 .md-search__form {
-  background: var(--saber-search-bg);
+  background-color: var(--saber-search-bg) !important;
   border: 1px solid var(--saber-header-border);
   box-shadow: none;
 }
 
 .md-search__input,
 .md-search__icon {
-  color: var(--saber-header-fg);
+  color: var(--saber-header-fg) !important;
 }
 
 .md-search__input::placeholder {
-  color: var(--saber-header-muted);
+  color: var(--saber-header-muted) !important;
 }
 
 .md-main {

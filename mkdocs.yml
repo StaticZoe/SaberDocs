@@ -19,14 +19,14 @@ theme:
     - content.code.copy
   palette:
     - scheme: default
-      primary: black
-      accent: indigo
+      primary: white
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
       primary: black
-      accent: indigo
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
