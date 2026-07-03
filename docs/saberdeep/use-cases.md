@@ -8,7 +8,7 @@ It is not just a stat container. It is a small composition model for gameplay va
 
 Use SaberDeep for values such as max health, damage, movement speed, armor, cooldown speed, or critical chance.
 
-Each equipment piece, perk, buff, debuff, difficulty rule, or temporary gameplay effect can own its own factor.
+Each equipment piece, loadout item, perk, buff, debuff, difficulty rule, or temporary gameplay effect can own its own factor.
 
 When a factor is added or removed, SaberDeep recomputes the final value from `Origin` and the remaining factors.
 
@@ -25,20 +25,6 @@ Dialogue, cutscenes, stun effects, UI modals, and scripted interactions may all 
 With a `USaberDeepBool` attribute, each system inserts its own factor that returns `false`. When the system finishes, it removes only its own factor.
 
 Input becomes enabled only when all disabling factors are gone.
-
-## Equipment and Loadout Rebuilds
-
-Use `Auto Refresh` control when rebuilding many factors at once.
-
-For example, when a character changes equipment:
-
-1. Disable `Auto Refresh`.
-2. Remove old equipment factors.
-3. Insert new equipment factors.
-4. Call `Refresh` once.
-5. Enable `Auto Refresh` again.
-
-This keeps the code simple while avoiding repeated intermediate recalculations.
 
 ## Gameplay Tags as Composable State
 
