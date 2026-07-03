@@ -12,6 +12,39 @@ Example:
 | Multiplier | `20` | Multiply by `2` |
 | Cap | `100` | Clamp or override later |
 
+## Max HP Example
+
+Suppose `MaxHP` has origin `100`.
+
+Two buffs are active:
+
+| Buff | Factor | Value |
+| --- | --- | --- |
+| Vitality buff | `USaberDeepIntAdd` | `+50` |
+| Power buff | `USaberDeepIntMul` | `x1.2` |
+
+If the add factor runs first:
+
+```text
+100 + 50 = 150
+150 x 1.2 = 180
+Final = 180
+```
+
+If the multiply factor runs first:
+
+```text
+100 x 1.2 = 120
+120 + 50 = 170
+Final = 170
+```
+
+Both results are valid depending on your design. Use `Force` to make that design explicit.
+
+When either buff is removed, SaberDeep refreshes from `Origin` and the remaining factors. Removing the add buff leaves only the multiplier, so `Final` becomes `120`. Removing the multiplier leaves only the add buff, so `Final` becomes `150`. Removing both returns `Final` to `100`.
+
+This is the main benefit of keeping modifiers as factors instead of writing directly into the final value.
+
 ## Recommended Practice
 
 Use clear force bands in your project:

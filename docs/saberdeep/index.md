@@ -12,6 +12,18 @@ Typical examples include:
 - single `FGameplayTag` values
 - `FGameplayTagContainer` values that can be added, removed, filtered, or overridden
 
+## Why Use SaberDeep
+
+Gameplay attributes often become hard to maintain when buffs, equipment, states, perks, difficulty rules, and temporary overrides all write directly into the same value.
+
+SaberDeep keeps those changes as separate factor objects:
+
+- add and remove modifiers without losing the original value
+- control calculation order with `Force`
+- recompute the final value from the current active factors
+- use the same model from Blueprint and C++
+- extend the system with custom C++ factors and Blueprint factor classes
+
 ## Core Concepts
 
 | Concept | Meaning |
@@ -41,6 +53,8 @@ SaberDeep exposes Blueprint creation functions through `USaberDeepBlueprintLibra
 
 C++ users can create and store SaberDeep objects with standard Unreal UObject ownership patterns, then call the public C++ API directly.
 
+Blueprint users can create custom factor behavior for supported attribute types by deriving from the Blueprint factor base classes. C++ users can define new factor classes, and can also build new DeepAttribute value families with the public `FDeepAttribute` template.
+
 ## Current Compatibility
 
-SaberDeep 1.0 is prepared and validated in an Unreal Engine 5.8 development project.
+SaberDeep 1.0 was built and packaged during release preparation with Unreal Engine 5.8. This describes the validation environment, not a statement that SaberDeep can only be used with Unreal Engine 5.8. Always check the Fab listing for the officially supported engine versions for a specific release.

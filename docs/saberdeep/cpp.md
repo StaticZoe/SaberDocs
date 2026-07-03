@@ -101,6 +101,42 @@ protected:
 
 Store custom factor instances in `UPROPERTY` references if they must stay alive.
 
+## Custom Attribute Family
+
+C++ can define a new DeepAttribute family by combining a UObject attribute class with the public `FDeepAttribute` template and a matching factor base.
+
+```cpp
+#include "SaberDeepAttribute.h"
+
+UCLASS(Abstract, BlueprintType)
+class UMyVectorFactor : public UObject, public FDeepAttributeFactor<FVector>
+{
+    GENERATED_BODY()
+
+public:
+    virtual void Fit(FVector& Attribute) const PURE_VIRTUAL(UMyVectorFactor::Fit)
+};
+
+UCLASS(BlueprintType)
+class UMyVectorAttribute : public UObject, public FDeepAttribute<FVector, UMyVectorFactor>
+{
+    GENERATED_BODY()
+
+public:
+    UMyVectorAttribute()
+    {
+        Origin = Final = FVector::ZeroVector;
+    }
+
+    virtual void Refresh() override
+    {
+        RefreshInternal();
+    }
+};
+```
+
+This is useful when your project needs the same factor-based model for a value type that is not included in SaberDeep's built-in attribute set.
+
 ## UObject Ownership
 
 Use a meaningful `Outer` such as an actor, component, subsystem, or game instance. Keep `UPROPERTY` references to attributes and factors.

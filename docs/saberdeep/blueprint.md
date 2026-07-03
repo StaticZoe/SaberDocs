@@ -75,6 +75,28 @@ Implement:
 
 `Init` is called by the SaberDeep factory. It is not called from Class Default Object initialization.
 
+Use Blueprint factor classes when designers need custom gameplay calculations without writing C++.
+
+For example, a custom int factor can:
+
+1. Derive from `USaberDeepIntFactorBlueprintBase`.
+2. Set default factor data in `Init`.
+3. Implement `Fit` to receive the current value and return the modified value.
+4. Be created with `Create SaberDeep Int Factor`.
+5. Be inserted into a `USaberDeepInt` attribute.
+
+Blueprint can customize factor behavior for the built-in SaberDeep attribute families. Creating a completely new value type is a C++ extension task.
+
+## Screenshot Checklist
+
+Recommended Blueprint documentation screenshots:
+
+| Screenshot | Purpose |
+| --- | --- |
+| Basic attribute and factor flow | Show create attribute, set origin, create factor, set value, insert factor, read final. |
+| Stored variables | Show that the Blueprint keeps strong references to the attribute and factor. |
+| Custom factor Blueprint | Show the `Init` and `Fit` events on a Blueprint factor class. |
+
 ## Lifetime Rule
 
 Attributes keep weak references to inserted factors.
