@@ -13,8 +13,8 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --saber-accent: #9aa7b2;
-  --saber-accent-strong: #c3ccd4;
+  --saber-accent: #d39a45;
+  --saber-accent-strong: #e7b866;
   --saber-teal: #58aba4;
   --saber-ink: #c8d0d6;
   --saber-heading: #d7dde2;
@@ -131,6 +131,10 @@
   background: var(--saber-accent);
   border-color: var(--saber-accent);
   color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  color: #15191d;
 }
 
 .md-typeset .md-button--primary:hover {
