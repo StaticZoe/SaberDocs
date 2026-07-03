@@ -32,7 +32,7 @@ Factory nodes are available under the `SaberDeep|Factor` category:
 | `Create SaberDeep Tag Factor` | subclass of `USaberDeepTagFactor` |
 | `Create SaberDeep Tags Factor` | subclass of `USaberDeepTagsFactor` |
 
-The factory returns `null` when the class input is empty or abstract.
+The factory returns an empty object reference when the class input is empty or abstract.
 
 ## Attribute Nodes
 
@@ -86,16 +86,6 @@ For example, a custom int factor can:
 5. Be inserted into a `USaberDeepInt` attribute.
 
 Blueprint can customize factor behavior for the built-in SaberDeep attribute families. Creating a completely new value type is a C++ extension task.
-
-## Screenshot Checklist
-
-Recommended Blueprint documentation screenshots:
-
-| Screenshot | Purpose |
-| --- | --- |
-| Basic attribute and factor flow | Show create attribute, set origin, create factor, set value, insert factor, read final. |
-| Stored variables | Show that the Blueprint keeps strong references to the attribute and factor. |
-| Custom factor Blueprint | Show the `Init` and `Fit` events on a Blueprint factor class. |
 
 ## Lifetime Rule
 

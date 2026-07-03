@@ -135,7 +135,9 @@ public:
 };
 ```
 
-This is useful when your project needs the same factor-based model for a value type that is not included in SaberDeep's built-in attribute set.
+This minimal example recomputes the final value. Add your own event or Blueprint-facing surface if the custom attribute family needs notifications.
+
+Custom attribute families are useful when your project needs the same factor-based model for a value type that is not included in SaberDeep's built-in attribute set.
 
 ## UObject Ownership
 

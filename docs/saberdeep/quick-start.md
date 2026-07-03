@@ -27,7 +27,7 @@ Basic flow:
 1. Create a `SaberDeep Int`.
 2. Store the returned object in a Blueprint variable.
 3. Call `Set Origin`, for example `100`.
-4. Create an `Int Add` factor.
+4. Create a `USaberDeepIntAdd` factor with `Create SaberDeep Int Factor`.
 5. Store the factor in a Blueprint variable.
 6. Set the factor value, for example `25`.
 7. Insert the factor into the attribute.

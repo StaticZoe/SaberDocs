@@ -2,7 +2,7 @@
 
 ## SaberDeep 1.0
 
-Initial Fab release preparation.
+Initial SaberDeep 1.0 release.
 
 ### Features
 
@@ -20,6 +20,4 @@ Initial Fab release preparation.
 
 ### Validation
 
-SaberDeep 1.0 was built and packaged during release preparation with Unreal Engine 5.8.
-
-This is the release validation environment. It does not mean the plugin is conceptually limited to Unreal Engine 5.8. Check the Fab listing for the officially supported engine versions for each release.
+SaberDeep 1.0 was built and packaged for release validation with Unreal Engine 5.8. Check the Fab listing for the officially supported engine versions for each release.

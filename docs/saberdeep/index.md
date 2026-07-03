@@ -62,4 +62,4 @@ Blueprint users can create custom factor behavior for supported attribute types 
 
 ## Current Compatibility
 
-SaberDeep 1.0 was built and packaged during release preparation with Unreal Engine 5.8. This describes the validation environment, not a statement that SaberDeep can only be used with Unreal Engine 5.8. Always check the Fab listing for the officially supported engine versions for a specific release.
+SaberDeep 1.0 was built and packaged for release validation with Unreal Engine 5.8. Check the Fab listing for the officially supported engine versions for each release.

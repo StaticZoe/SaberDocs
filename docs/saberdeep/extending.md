@@ -27,7 +27,7 @@ Each Blueprint factor class implements:
 | `Init` | Runs after SaberDeep factory creation. Use it for default factor setup. |
 | `Fit` | Receives the current value and returns the transformed value. |
 
-Blueprint factor classes should be created with the SaberDeep factory nodes so `Init` runs at the expected time.
+Create Blueprint factor classes with the SaberDeep factory nodes so `Init` runs at the expected time.
 
 ## C++ Factor Extensions
 
@@ -83,7 +83,9 @@ public:
 };
 ```
 
-This lets projects reuse the SaberDeep factor model for domain-specific value types without changing the plugin source.
+This minimal example recomputes the final value. Add events or Blueprint-facing methods as needed for your own attribute family.
+
+Custom attribute families let projects reuse the SaberDeep factor model for domain-specific value types without changing the plugin source.
 
 ## Design Guidelines
 
