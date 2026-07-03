@@ -50,6 +50,7 @@ nav:
       - Blueprint: saberdeep/blueprint.md
       - C++: saberdeep/cpp.md
       - Force Order: saberdeep/force-order.md
+      - Auto Refresh: saberdeep/auto-refresh.md
       - API Reference: saberdeep/api.md
       - Extending: saberdeep/extending.md
       - Release Notes: saberdeep/release-notes.md

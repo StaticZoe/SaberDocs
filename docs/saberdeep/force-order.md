@@ -76,29 +76,6 @@ If you need to change `Force` after insertion:
 
 This keeps the sorted factor container correct.
 
-## Batch Changes with Auto Refresh
-
-`Auto Refresh` is enabled by default. With it enabled, operations such as inserting, removing, clearing, or resetting factors refresh the final value immediately.
-
-For normal gameplay changes, this is convenient and keeps `Final` up to date.
-
-For batch updates, you can temporarily disable `Auto Refresh`, perform all factor changes, call `Refresh` once, then enable `Auto Refresh` again.
-
-This avoids recalculating the attribute after every intermediate operation.
-
-Example batch flow:
-
-1. Set `Auto Refresh` to `false`.
-2. Remove old factors.
-3. Change factor values or `Force`.
-4. Insert the new factor set.
-5. Call `Refresh`.
-6. Set `Auto Refresh` back to `true`.
-
-Use this pattern when one code path adds or removes many factors at once, such as rebuilding equipment modifiers, reapplying a full buff list, or changing multiple factor forces.
-
-While `Auto Refresh` is disabled, `Final` may be stale until you call `Refresh`.
-
 ## Factor Lifetime
 
 SaberDeep stores weak references to factors.
