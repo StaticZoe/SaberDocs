@@ -1,8 +1,15 @@
+<div class="saber-hero" markdown>
+
 # SaberDeep
 
 **SaberDeep** is a Runtime Unreal Engine plugin for building factor-based attributes.
 
 It is designed for gameplay values that start from an origin value, accept ordered modifier objects called factors, and expose a computed final value.
+
+[Quick Start](quick-start.md){ .md-button .md-button--primary }
+[API Reference](api.md){ .md-button }
+
+</div>
 
 Typical examples include:
 
@@ -23,6 +30,10 @@ SaberDeep keeps those changes as separate factor objects:
 - recompute the final value from the current active factors
 - use the same model from Blueprint and C++
 - extend the system with custom C++ factors and Blueprint factor classes
+
+!!! tip "Designed for modifier-heavy gameplay"
+
+    SaberDeep keeps each modifier as its own factor, so removing a buff, item, perk, or temporary override recomputes the final value from the remaining active factors.
 
 ## Core Concepts
 

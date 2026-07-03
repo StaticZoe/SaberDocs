@@ -10,8 +10,10 @@ theme:
   language: en
   features:
     - navigation.instant
+    - navigation.tabs
     - navigation.sections
     - navigation.top
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -41,6 +43,9 @@ markdown_extensions:
   - pymdownx.snippets
   - toc:
       permalink: true
+
+extra_css:
+  - stylesheets/saber.css
 
 nav:
   - Home: index.md

@@ -1,14 +1,28 @@
+<div class="saber-hero" markdown>
+
 # Saber Docs
 
-Saber Docs is the public documentation site for Saber Unreal Engine plugins.
+Public documentation for **Saber Unreal Engine plugins**.
 
 The first product documented here is **SaberDeep**, a runtime plugin for factor-based attributes in Unreal Engine.
 
+[Open SaberDeep docs](saberdeep/index.md){ .md-button .md-button--primary }
+
+</div>
+
 ## Plugins
 
-| Plugin | Status | Documentation |
-| --- | --- | --- |
-| SaberDeep | Preparing for Fab release | [Open SaberDeep docs](saberdeep/index.md) |
+<div class="grid cards" markdown>
+
+-   **SaberDeep**
+
+    ---
+
+    Runtime factor-based attributes for Unreal Engine gameplay systems.
+
+    [:octicons-arrow-right-24: Documentation](saberdeep/index.md)
+
+</div>
 
 ## Documentation Policy
 
