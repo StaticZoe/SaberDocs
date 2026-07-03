@@ -95,7 +95,7 @@
 }
 
 .md-content {
-  background: var(--saber-content-bg);
+  background: transparent;
 }
 
 .md-typeset {
@@ -160,12 +160,12 @@
 
 .md-typeset .saber-hero {
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--saber-panel-soft) 84%, transparent), var(--saber-panel));
-  border: 1px solid var(--saber-border);
-  border-left: 0.35rem solid var(--saber-accent);
-  border-radius: 0.45rem;
+    linear-gradient(135deg, color-mix(in srgb, var(--saber-panel) 54%, transparent), transparent);
+  border-top: 1px solid var(--saber-border);
+  border-bottom: 1px solid var(--saber-border);
+  border-left: 0.22rem solid var(--saber-accent);
   margin: 0 0 1.6rem;
-  padding: 1.15rem 1.3rem;
+  padding: 1.1rem 0 1.15rem 1.25rem;
 }
 
 .md-typeset .saber-hero h1 {
@@ -230,8 +230,9 @@
   }
 
   .md-content {
-    border: 1px solid var(--saber-border);
-    border-radius: 0.45rem;
+    border-left: 1px solid color-mix(in srgb, var(--saber-border) 58%, transparent);
+    border-right: 1px solid color-mix(in srgb, var(--saber-border) 58%, transparent);
+    border-radius: 0;
     min-height: calc(100vh - 7rem);
   }
 
