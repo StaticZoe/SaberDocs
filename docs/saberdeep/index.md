@@ -14,30 +14,20 @@ It is designed for gameplay values that start from an origin value, accept order
 
 ## Why Use SaberDeep
 
-Gameplay attributes often become hard to maintain when buffs, equipment, states, perks, difficulty rules, and temporary overrides all write directly into the same value.
+Gameplay values become difficult to maintain when many systems write directly into the same final value.
 
-SaberDeep keeps those changes as separate factor objects:
+SaberDeep keeps each contribution as a separate factor, then recomputes `Final` from `Origin` and the active factor set.
 
-- add and remove modifiers without losing the original value
-- control calculation order with `Force`
-- recompute the final value from the current active factors
-- let independent systems affect the same final value without direct dependencies
-- use the same model from Blueprint and C++
-- extend the system with custom C++ factors and Blueprint factor classes
+This gives you:
 
-### Example: Independent Overrides
-
-Several gameplay systems may need to disable player input, such as dialogue, cutscenes, stun effects, UI modals, or scripted interactions.
-
-If each system directly sets input enabled or disabled, one system can accidentally enable input while another system still needs it disabled.
-
-With SaberDeep, player input can be represented as a `USaberDeepBool` attribute. Each system that needs to disable input inserts its own bool override factor that returns `false`. When that system is finished, it removes only its own factor.
-
-The final input state becomes enabled only after all systems have removed their disabling factors. The systems do not need to know about each other.
+- reversible modifiers that can be added and removed safely
+- explicit calculation order through `Force`
+- the same factor model in Blueprint and C++
+- extension points for custom gameplay rules
 
 !!! tip "Designed for modifier-heavy gameplay"
 
-    SaberDeep keeps each modifier as its own factor, so removing a buff, item, perk, or temporary override recomputes the final value from the remaining active factors.
+    For practical examples such as stacked stats, independent input locks, equipment rebuilds, tag composition, and event-driven UI updates, see [Use Cases](use-cases.md).
 
 ## Core Concepts
 
