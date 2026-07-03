@@ -7,17 +7,10 @@
 It is designed for gameplay values that start from an origin value, accept ordered modifier objects called factors, and expose a computed final value.
 
 [Quick Start](quick-start.md){ .md-button .md-button--primary }
+[Use Cases](use-cases.md){ .md-button }
 [API Reference](api.md){ .md-button }
 
 </div>
-
-Typical examples include:
-
-- health, damage, armor, speed, or other numeric stats
-- boolean states affected by temporary overrides
-- enum-like states stored as `uint8`
-- single `FGameplayTag` values
-- `FGameplayTagContainer` values that can be added, removed, filtered, or overridden
 
 ## Why Use SaberDeep
 
@@ -28,6 +21,7 @@ SaberDeep keeps those changes as separate factor objects:
 - add and remove modifiers without losing the original value
 - control calculation order with `Force`
 - recompute the final value from the current active factors
+- let independent systems affect the same final value without direct dependencies
 - use the same model from Blueprint and C++
 - extend the system with custom C++ factors and Blueprint factor classes
 

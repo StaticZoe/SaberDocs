@@ -182,6 +182,14 @@
   font-weight: 720;
 }
 
+.md-typeset .saber-hero .md-button {
+  font-size: 0.78rem;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  min-width: 6.8rem;
+  padding: 0.48rem 0.8rem;
+  text-align: center;
+}
+
 .md-typeset .md-button--primary {
   background: var(--saber-accent);
   border-color: var(--saber-accent);
