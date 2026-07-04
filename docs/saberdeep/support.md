@@ -8,7 +8,9 @@ Use GitHub Issues for public technical reports:
 
 Use public issues for bug reports, documentation problems, compatibility reports, and feature requests.
 
-For private cases, use the private contact method shown on the Fab listing if one is available.
+If you do not have a GitHub account, or need to discuss private project details, contact:
+
+[starskiss.works@outlook.com](mailto:starskiss.works@outlook.com)
 
 When reporting an issue, include:
 
