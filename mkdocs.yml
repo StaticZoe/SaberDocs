@@ -47,6 +47,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/saber.css
 
+extra_javascript:
+  - javascripts/lightbox.js
+
 nav:
   - Home: index.md
   - SaberDeep:
