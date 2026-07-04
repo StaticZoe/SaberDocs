@@ -81,6 +81,47 @@ void AMyActor::OnHealthChanged(USaberDeepInt* ChangedHealth)
 
 `ValueChangedEvent` broadcasts only when `Refresh()` changes `Final` and `Auto Broadcast` is enabled.
 
+## Enum Example
+
+`USaberDeepEnum` stores enum-like state as `uint8`.
+
+```cpp
+#include "SaberDeepEnum.h"
+
+UENUM(BlueprintType)
+enum class ECombatMode : uint8
+{
+    Normal,
+    Stunned,
+    Blocking,
+    Casting,
+};
+
+UPROPERTY()
+TObjectPtr<USaberDeepEnum> CombatMode;
+
+UPROPERTY()
+TObjectPtr<USaberDeepEnumOverride> StunOverride;
+
+void AMyActor::BeginPlay()
+{
+    Super::BeginPlay();
+
+    CombatMode = NewObject<USaberDeepEnum>(this);
+    CombatMode->SetOriginEnum(ECombatMode::Normal);
+
+    StunOverride = NewObject<USaberDeepEnumOverride>(this);
+    StunOverride->SetFactor(ECombatMode::Stunned);
+    StunOverride->SetForce(100);
+
+    CombatMode->InsertFactor(StunOverride);
+
+    const ECombatMode FinalMode = CombatMode->GetFinalEnum<ECombatMode>();
+}
+```
+
+Use enum attributes for one active state. Use `USaberDeepTags` when several named states may be active at the same time.
+
 ## Custom C++ Factor
 
 ```cpp

@@ -9,7 +9,7 @@ This page summarizes the public runtime types in SaberDeep 1.0.
 | `USaberDeepInt` | `int32` | `0` |
 | `USaberDeepFloat` | `float` | `0.0` |
 | `USaberDeepBool` | `bool` | `false` |
-| `USaberDeepEnum` | `uint8` | `0` |
+| `USaberDeepEnum` | `uint8` enum-like state | `0` |
 | `USaberDeepTag` | `FGameplayTag` | `FGameplayTag::EmptyTag` |
 | `USaberDeepTags` | `FGameplayTagContainer` | `FGameplayTagContainer::EmptyContainer` |
 
@@ -29,6 +29,16 @@ Common C++ operations:
 | `Refresh()` | Recomputes final and broadcasts on change when enabled. |
 | `SetAutoRefresh(bool)` | Enables or disables automatic refresh. |
 | `SetAutoBroadcast(bool)` | Enables or disables change broadcasts. |
+
+## Enum Values
+
+`USaberDeepEnum` is a byte-backed attribute for single enum-like state.
+
+It does not store a `UEnum` reference and does not provide automatic reflection over enum names. The runtime value is `uint8`.
+
+Use it when a state is naturally represented by a single small enum value and you need SaberDeep factor behavior such as override, ordered composition, safe removal, and value changed events.
+
+For pure Blueprint readability, `USaberDeepTag` is often clearer for named states because it keeps state names visible as Gameplay Tags.
 
 ## Factor Base API
 

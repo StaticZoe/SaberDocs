@@ -19,6 +19,14 @@ Factory nodes are available under the `SaberDeep` category:
 
 The `Outer` input defaults to `self`. Use an owner that will live at least as long as the attribute.
 
+## Enum Attributes in Blueprint
+
+`USaberDeepEnum` is exposed as byte-based state in Blueprint.
+
+Use it when a compact single-state value is enough. Convert between your Blueprint enum and byte where needed.
+
+If designers need readable named states in the graph or Details panel, prefer `USaberDeepTag` or `USaberDeepTags`.
+
 ## Create Factors
 
 Factory nodes are available under the `SaberDeep|Factor` category:

@@ -48,9 +48,11 @@ This gives you:
 | `USaberDeepInt` | `int32` |
 | `USaberDeepFloat` | `float` |
 | `USaberDeepBool` | `bool` |
-| `USaberDeepEnum` | `uint8` |
+| `USaberDeepEnum` | `uint8` enum-like state |
 | `USaberDeepTag` | `FGameplayTag` |
 | `USaberDeepTags` | `FGameplayTagContainer` |
+
+`USaberDeepEnum` stores enum-like values as `uint8`. In C++, it provides helper templates for casting to and from enum classes. In Blueprint, it appears as byte-based state.
 
 ## Blueprint and C++
 
