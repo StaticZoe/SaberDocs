@@ -1,12 +1,12 @@
 # Support
 
-This page is the stable support entry for SaberDeep and may route to the current support channel for each release.
+This page is the stable support entry for SaberDeep.
 
-Public technical reports should use GitHub Issues after issue creation is enabled for the documentation repository:
+Use GitHub Issues for public technical reports:
 
 [SaberDocs Issues](https://github.com/StaticZoe/SaberDocs/issues)
 
-Use public issues for bug reports, documentation problems, compatibility reports, and feature requests. If issue creation is restricted, use the private contact method shown on the Fab listing.
+Use public issues for bug reports, documentation problems, compatibility reports, and feature requests.
 
 For private cases, use the private contact method shown on the Fab listing if one is available.
 
