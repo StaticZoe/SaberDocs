@@ -1,6 +1,14 @@
 # Support
 
-For product support, use the official support channel linked from the Fab listing.
+This page is the stable support entry for SaberDeep and may route to the current support channel for each release.
+
+Public technical reports should use GitHub Issues after issue creation is enabled for the documentation repository:
+
+[SaberDocs Issues](https://github.com/StaticZoe/SaberDocs/issues)
+
+Use public issues for bug reports, documentation problems, compatibility reports, and feature requests. If issue creation is restricted, use the private contact method shown on the Fab listing.
+
+For private cases, use the private contact method shown on the Fab listing if one is available.
 
 When reporting an issue, include:
 
@@ -9,8 +17,6 @@ When reporting an issue, include:
 - Whether the issue happens in Blueprint, C++, or both
 - Minimal reproduction steps
 - Relevant log output
-
-Do not include private project files, marketplace downloads, access tokens, or proprietary source code in public reports.
 
 ## Before Reporting
 
