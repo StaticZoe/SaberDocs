@@ -190,6 +190,16 @@
   text-align: center;
 }
 
+.md-typeset img.saber-screenshot {
+  background: #14181b;
+  border: 1px solid var(--saber-border);
+  border-radius: 0.35rem;
+  display: block;
+  height: auto;
+  margin: 0.65rem 0 1.35rem;
+  max-width: 100%;
+}
+
 .md-typeset .md-button--primary {
   background: var(--saber-accent);
   border-color: var(--saber-accent);

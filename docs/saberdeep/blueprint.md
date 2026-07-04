@@ -17,6 +17,8 @@ Factory nodes are available under the `SaberDeep` category:
 | `Create SaberDeep Tag` | `USaberDeepTag` |
 | `Create SaberDeep Tags` | `USaberDeepTags` |
 
+![Create SaberDeep attribute factory nodes](../assets/saberdeep/create_attributes.png){ .saber-screenshot }
+
 The `Outer` input defaults to `self`. Use an owner that will live at least as long as the attribute.
 
 ## Enum Attributes in Blueprint
@@ -40,6 +42,8 @@ Factory nodes are available under the `SaberDeep|Factor` category:
 | `Create SaberDeep Tag Factor` | subclass of `USaberDeepTagFactor` |
 | `Create SaberDeep Tags Factor` | subclass of `USaberDeepTagsFactor` |
 
+![Create SaberDeep factor factory nodes](../assets/saberdeep/create_factors.png){ .saber-screenshot }
+
 The factory returns an empty object reference when the class input is empty or abstract.
 
 ## Attribute Nodes
@@ -61,7 +65,15 @@ Each attribute exposes these Blueprint operations:
 | `Is Auto Broadcast` | Reads the event broadcast flag. |
 | `Set Auto Broadcast` | Changes the event broadcast flag. |
 
-Each attribute also exposes `ValueChangedEvent`.
+![Insert, remove, and clear SaberDeep factors](../assets/saberdeep/insert_remove_factor.png){ .saber-screenshot }
+
+The same factor lifecycle is available on each attribute family, with the target type matching the attribute.
+
+## Value Changed Event
+
+Each attribute exposes `ValueChangedEvent`.
+
+![Bind a custom event to ValueChangedEvent](../assets/saberdeep/bind_unbind_event.png){ .saber-screenshot }
 
 ## Custom Blueprint Factors
 
@@ -74,12 +86,16 @@ Create a Blueprint class based on one of these classes:
 - `USaberDeepTagFactorBlueprintBase`
 - `USaberDeepTagsFactorBlueprintBase`
 
+![Create a custom SaberDeep factor Blueprint class](../assets/saberdeep/custom_subclass.png){ .saber-screenshot }
+
 Implement:
 
 | Event | Purpose |
 | --- | --- |
 | `Init` | Initializes factor values after the SaberDeep factory creates the factor. |
 | `Fit` | Receives the current attribute value and returns the transformed value. |
+
+![Implement Init and Fit in a custom SaberDeep factor](../assets/saberdeep/custom_subclass_implement_functions.png){ .saber-screenshot }
 
 `Init` is called by the SaberDeep factory. It is not called from Class Default Object initialization.
 
