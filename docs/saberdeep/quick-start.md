@@ -29,7 +29,7 @@ Basic flow:
 3. Call `Set Origin`, for example `100`.
 4. Create a `USaberDeepIntAdd` factor with `Create SaberDeep Int Factor`.
 5. Store the factor in a Blueprint variable.
-6. Set the factor value, for example `25`.
+6. Set the factor value, for example `50`.
 7. Insert the factor into the attribute.
 8. Read `Get Final`.
 
@@ -62,7 +62,7 @@ UPROPERTY()
 TObjectPtr<USaberDeepInt> Health;
 
 UPROPERTY()
-TObjectPtr<USaberDeepIntAdd> BonusHealth;
+TObjectPtr<USaberDeepIntAdd> AddMaxHealthFactor;
 
 void AMyActor::BeginPlay()
 {
@@ -71,10 +71,10 @@ void AMyActor::BeginPlay()
     Health = NewObject<USaberDeepInt>(this);
     Health->SetOrigin(100);
 
-    BonusHealth = NewObject<USaberDeepIntAdd>(this);
-    BonusHealth->SetValue(25.f);
+    AddMaxHealthFactor = NewObject<USaberDeepIntAdd>(this);
+    AddMaxHealthFactor->SetValue(50.f);
 
-    Health->InsertFactor(BonusHealth);
+    Health->InsertFactor(AddMaxHealthFactor);
 
     const int32 CurrentHealth = Health->GetFinal();
 }
