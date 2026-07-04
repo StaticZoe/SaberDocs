@@ -33,6 +33,8 @@ Basic flow:
 7. Insert the factor into the attribute.
 8. Read `Get Final`.
 
+![Blueprint quick start flow for SaberDeep Int](../assets/saberdeep/quick_start.png){ .saber-screenshot }
+
 If `Auto Refresh` is enabled, `Final` updates when the factor is inserted.
 
 ## C++ Quick Start
