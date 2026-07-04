@@ -7,9 +7,12 @@ The site is built with MkDocs Material and published with GitHub Pages.
 ## Local preview
 
 ```powershell
-python -m pip install -r requirements.txt
-mkdocs serve
+.\.venv\Scripts\mkdocs.exe serve -a 127.0.0.1:8001
+.\.venv\Scripts\mkdocs.exe build --strict
 ```
+
+Use the repository `.venv` for local preview and validation. A global `python`
+may point to a different environment without `mkdocs` installed.
 
 ## Copyright
 
